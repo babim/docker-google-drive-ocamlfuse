@@ -1,10 +1,9 @@
-FROM ubuntu:xenial
-MAINTAINER Mitchell Hewes <me@mitcdh.com>
+FROM babim/ubuntubase:18.04
 
 ENV DRIVE_PATH="/mnt/gdrive"
 
-RUN echo "deb http://ppa.launchpad.net/alessandro-strada/ppa/ubuntu xenial main" >> /etc/apt/sources.list \
- && echo "deb-src http://ppa.launchpad.net/alessandro-strada/ppa/ubuntu xenial main" >> /etc/apt/sources.list \
+RUN echo "deb http://ppa.launchpad.net/alessandro-strada/ppa/ubuntu bionic main" >> /etc/apt/sources.list \
+ && echo "deb-src http://ppa.launchpad.net/alessandro-strada/ppa/ubuntu bionic main" >> /etc/apt/sources.list \
  && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F639B041 \
  && apt-get update \
  && apt-get install -yy google-drive-ocamlfuse fuse \
