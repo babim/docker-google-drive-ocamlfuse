@@ -1,4 +1,6 @@
 # Docker google-drive-ocamlfuse
+Thanks mitcdh
+
 Docker image to mount a google drive with google-drive-ocamlfuse shared with host.
 
 ### Environment Variables
@@ -38,7 +40,7 @@ docker run -d \
 --cap-add sys_admin \
 --device=/dev/fuse \
 -v /mnt/drive:/mnt/gdrive:shared \
-mitcdh/google-drive-ocamlfuse
+babim/google-drive
 ````
 
 ### Structure
