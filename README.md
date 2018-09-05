@@ -43,5 +43,7 @@ docker run -d \
 babim/google-drive
 ````
 
+Volume config - cache /config
+
 ### Structure
 * `/mnt/gdrive`: Google Drive Fuse mount directory inside container
