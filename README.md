@@ -42,8 +42,19 @@ docker run -d \
 -v /mnt/drive:/mnt/gdrive:shared \
 babim/google-drive
 ````
-
-Volume config - cache /config
+Note: 
+- Volume config - cache /config
+```
+For all user can read/write
+-e MOUNT_OPTS=allow_other
+```
+Step:
+```
+- Check web link to verify after run
+- Copy verify code from browser
+- Remove docker container
+- Recreate with new verify code
+```
 
 ### Structure
 * `/mnt/gdrive`: Google Drive Fuse mount directory inside container
