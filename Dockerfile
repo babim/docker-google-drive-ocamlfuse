@@ -2,7 +2,8 @@ FROM babim/ubuntubase:18.04
 
 ENV DRIVE_PATH="/mnt/gdrive"
 
-RUN echo "deb http://ppa.launchpad.net/alessandro-strada/ppa/ubuntu bionic main" >> /etc/apt/sources.list \
+RUN apt-get update && apt-get install -y gnupg \
+ && echo "deb http://ppa.launchpad.net/alessandro-strada/ppa/ubuntu bionic main" >> /etc/apt/sources.list \
  && echo "deb-src http://ppa.launchpad.net/alessandro-strada/ppa/ubuntu bionic main" >> /etc/apt/sources.list \
  && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F639B041 \
  && apt-get update \
